@@ -91,8 +91,8 @@ coffee-blend/
    ```
 
 5. **Access Application**
-   - Homepage: http://localhost:8000
-   - Admin Panel: http://localhost:8000/admin-panel
+   - Homepage: https://mycafe.free.nf/?i=1
+   - Admin Panel: https://mycafe.free.nf/?i=1/admin-panel
 
 ## 🗄️ Database Schema
 
