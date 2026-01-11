@@ -92,7 +92,7 @@ coffee-blend/
 
 5. **Access Application**
    - Homepage: https://mycafe.free.nf/?i=1
-   - Admin Panel: https://mycafe.free.nf/?i=1/admin-panel
+   - Admin Panel: https://mycafe.free.nf/admin-panel
 
 ## 🗄️ Database Schema
 
