@@ -1,0 +1,109 @@
+==========================================
+   INFINITYFREE DEPLOYMENT - QUICK START
+==========================================
+
+STEP 1: Get InfinityFree Credentials
+------------------------------------
+Sign up at: https://infinityfree.net
+After activation, note down:
+  • Your domain (e.g., mycoffee.infinityfreeapp.com)
+  • Database host (e.g., sql200.infinityfreeapp.com)
+  • Database name (e.g., ifXXXXX_caffee)
+  • Database username (e.g., ifXXXXX_user)
+  • Database password (your password)
+  • FTP host: ftpupload.net
+  • FTP username (from control panel)
+  • FTP password (your account password)
+
+
+STEP 2: Update These 3 Files
+-----------------------------
+File #1: config/config.php
+  Find lines ~14-17 (PRODUCTION section):
+    define("HOST", "sql###.infinityfreeapp.com");
+    define("DBNAME", "ifXXXXX_caffee");
+    define("USER", "ifXXXXX_user");
+    define("PASS", "your_password_here");
+  
+  Replace with YOUR actual credentials!
+
+File #2: includes/header.php
+  Find line ~11:
+    define("APPURL", "https://your-domain.infinityfreeapp.com");
+    define("IMAGEPRODUCTS", "https://your-domain.infinityfreeapp.com/admin-panel/products-admins/images");
+  
+  Replace "your-domain" with your actual domain!
+
+File #3: admin-panel/layouts/header.php
+  Find line ~11:
+    define("ADMINURL", "https://your-domain.infinityfreeapp.com/admin-panel");
+  
+  Replace "your-domain" with your actual domain!
+
+
+STEP 3: Upload via FTP
+-----------------------
+Using FileZilla or InfinityFree File Manager:
+  1. Connect to: ftpupload.net (port 21)
+  2. Go to "htdocs" folder
+  3. Delete all existing files in htdocs
+  4. Upload ALL your project files
+  5. Make sure .htaccess is uploaded
+
+
+STEP 4: Import Database
+------------------------
+  1. Go to InfinityFree Control Panel
+  2. Open phpMyAdmin
+  3. Select your database
+  4. Click "Import" tab
+  5. Upload: SQL_FILE/coffee-blend.sql
+  6. Click "Go" and wait
+
+
+STEP 5: Test Your Site
+-----------------------
+Visit: https://your-domain.infinityfreeapp.com
+  • Check homepage loads with styling
+  • Test user registration
+  • Test login
+  • Visit admin: https://your-domain.infinityfreeapp.com/admin-panel
+
+Admin Login:
+  Email: admin.first@gmail.com
+  Password: (check phpMyAdmin or reset)
+
+
+TROUBLESHOOTING
+---------------
+Problem: White screen or errors
+Solution: Check database credentials in config.php
+
+Problem: CSS not loading
+Solution: Verify domain URL in includes/header.php
+
+Problem: Can't login to admin
+Solution: Reset password in phpMyAdmin:
+  1. Go to "admins" table
+  2. Edit admin record
+  3. Update password field with new hash
+
+
+IMPORTANT NOTES
+---------------
+✓ Project auto-detects localhost vs production
+✓ Works on localhost:8000 (for testing)
+✓ Works on InfinityFree (after updating 3 files)
+✓ Don't upload: setup-database.php, test-project.php
+✓ Keep .htaccess file - it's important!
+
+
+NEED HELP?
+----------
+Read full guide: INFINITYFREE-DEPLOYMENT-GUIDE.md
+InfinityFree Forum: https://forum.infinityfree.net/
+
+
+==========================================
+      Good Luck with Your Deployment!
+==========================================

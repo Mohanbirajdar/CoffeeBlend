@@ -1,0 +1,87 @@
+═══════════════════════════════════════════════════════════
+  🚨 QUICK FIX GUIDE - Visit https://mycafe.free.nf NOW!
+═══════════════════════════════════════════════════════════
+
+STEP 1: DIAGNOSE THE PROBLEM (5 minutes)
+─────────────────────────────────────────
+1. Upload these files to InfinityFree via FTP:
+   ✓ check-site.php
+   ✓ test-database.php
+
+2. Visit in your browser:
+   👉 https://mycafe.free.nf/check-site.php
+   👉 https://mycafe.free.nf/test-database.php
+
+3. Read the results - they'll tell you EXACTLY what's wrong!
+
+═══════════════════════════════════════════════════════════
+
+MOST COMMON ISSUES & 30-SECOND FIXES:
+─────────────────────────────────────────
+
+❌ PROBLEM: White screen / Nothing shows
+✅ FIX: 
+   - Check all files uploaded to htdocs folder
+   - Make sure index.php is in root of htdocs
+   - Re-upload if needed
+
+❌ PROBLEM: Database connection error
+✅ FIX:
+   1. Go to InfinityFree → MySQL Databases
+   2. Create database: if0_40757292_caffee (if not exists)
+   3. Open phpMyAdmin
+   4. Import: SQL_FILE/coffee-blend.sql
+   5. Done!
+
+❌ PROBLEM: No styling / Plain text
+✅ FIX:
+   - Check includes/header.php line 11
+   - Should be: define("APPURL", "https://mycafe.free.nf");
+   - Re-upload if wrong
+
+❌ PROBLEM: Admin panel not working
+✅ FIX:
+   - Check admin-panel/layouts/header.php line 11
+   - Should be: define("ADMINURL", "https://mycafe.free.nf/admin-panel");
+   - Re-upload if wrong
+
+❌ PROBLEM: Can't login to admin
+✅ FIX:
+   1. Open phpMyAdmin
+   2. Go to "admins" table
+   3. Check if admin exists
+   4. If needed, reset password (see guide)
+
+═══════════════════════════════════════════════════════════
+
+WHAT YOU SHOULD SEE WHEN WORKING:
+─────────────────────────────────────────
+✓ https://mycafe.free.nf → Coffee shop homepage with images
+✓ https://mycafe.free.nf/menu.php → Menu with products
+✓ https://mycafe.free.nf/auth/register.php → Registration form
+✓ https://mycafe.free.nf/admin-panel → Admin login page
+
+═══════════════════════════════════════════════════════════
+
+FILES YOU CREATED FOR TROUBLESHOOTING:
+─────────────────────────────────────────
+📄 check-site.php → Complete site health check
+📄 test-database.php → Database connection test
+📄 TROUBLESHOOTING-LIVE-SITE.md → Detailed guide
+
+REMEMBER: Delete check-site.php and test-database.php after fixing!
+
+═══════════════════════════════════════════════════════════
+
+TELL ME WHAT YOU SEE:
+─────────────────────────────────────────
+After visiting https://mycafe.free.nf/check-site.php
+
+Tell me:
+1. What errors show up? (copy/paste them)
+2. What's the database connection status?
+3. Which files are missing?
+
+I'll give you exact fixes based on the results!
+
+═══════════════════════════════════════════════════════════

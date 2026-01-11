@@ -1,0 +1,66 @@
+# InfinityFree Deployment Checklist
+
+## Before Upload
+- [ ] Get InfinityFree account credentials
+- [ ] Get database credentials (host, name, username, password)
+- [ ] Get your domain URL (e.g., mycoffee.infinityfreeapp.com)
+
+## Files to Update (MANDATORY)
+
+### 1. config/config.php
+```php
+// Line ~14-17, replace:
+define("HOST", "sql###.infinityfreeapp.com"); // Your actual host
+define("DBNAME", "ifXXXXX_caffee"); // Your database name
+define("USER", "ifXXXXX_user"); // Your username
+define("PASS", "your_password_here"); // Your password
+```
+
+### 2. includes/header.php
+```php
+// Line ~11, replace:
+define("APPURL", "https://your-actual-domain.infinityfreeapp.com");
+define("IMAGEPRODUCTS", "https://your-actual-domain.infinityfreeapp.com/admin-panel/products-admins/images");
+```
+
+### 3. admin-panel/layouts/header.php
+```php
+// Line ~11, replace:
+define("ADMINURL", "https://your-actual-domain.infinityfreeapp.com/admin-panel");
+```
+
+## Upload Steps
+- [ ] Connect to FTP (ftpupload.net, port 21)
+- [ ] Navigate to htdocs folder
+- [ ] Delete existing files in htdocs
+- [ ] Upload ALL project files (except setup-database.php, test-project.php)
+- [ ] Verify .htaccess file is uploaded
+
+## Database Setup
+- [ ] Login to phpMyAdmin from control panel
+- [ ] Select your database
+- [ ] Import SQL_FILE/coffee-blend.sql
+- [ ] Verify all 7 tables created successfully
+
+## Testing
+- [ ] Visit homepage (check styling loads)
+- [ ] Test user registration
+- [ ] Test user login
+- [ ] Visit admin panel
+- [ ] Test admin login
+
+## Default Admin Login
+Email: admin.first@gmail.com
+Password: (check database or reset via phpMyAdmin)
+
+---
+
+## Quick Reference
+
+**InfinityFree Control Panel**: https://dash.infinityfree.net/
+**FTP Host**: ftpupload.net
+**FTP Port**: 21
+**Upload Location**: htdocs/
+
+## Need Help?
+Read: INFINITYFREE-DEPLOYMENT-GUIDE.md
