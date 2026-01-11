@@ -109,12 +109,12 @@ coffee-blend/
 ## 🔐 Default Credentials
 
 ### Admin Account
-- **Email**: admin@admin.com
-- **Password**: admin123
+- **Email**: admin.first@gmail.com
+- **Password**: password
 
 ### Test User
-- **Email**: test@test.com
-- **Password**: test123
+- **Email**: user@gmail.com
+- **Password**: password
 
 ## 📸 Screenshots
 
